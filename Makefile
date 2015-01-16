@@ -1,0 +1,8 @@
+MANAGE=django-admin.py
+SETTINGS=test_42.settings
+
+test:
+	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=$(SETTINGS) $(MANAGE) test
+
+run:
+	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=$(SETTINGS) $(MANAGE) runserver
